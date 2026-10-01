@@ -1,5 +1,10 @@
-import PanasheSite from '@/components/panashe-site';
+import PanasheSite from "@/components/panashe-site";
 
-export default function RoutedPage(){
-  return <PanasheSite/>;
+export default async function RoutedPage({
+  params,
+}: {
+  params: Promise<{ slug: string[] }>;
+}) {
+  const { slug } = await params;
+  return <PanasheSite initialPath={`/${slug.join("/")}`} />;
 }
