@@ -48,3 +48,6 @@ panashe-site.zip
 qa-*.png
 AGENTS.md
 CLAUDE.md
+
+.vercel
+.env*
